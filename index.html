@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpire Tech - Your Mental Wellness Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-12 text-slate-700;
+        }
+        .service-card, .testimonial-card {
+            @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1;
+        }
+        .cta-button {
+            @apply px-8 py-3 bg-emerald-500 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-600 transition-colors duration-300;
+        }
+        .nav-link {
+            @apply text-slate-100 hover:text-emerald-300 transition-colors duration-300;
+        }
+        .animated-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stat-item {
+            @apply text-center p-4;
+        }
+        .stat-number {
+            @apply text-4xl font-bold text-emerald-500 mb-1;
+        }
+        .stat-label {
+            @apply text-slate-600;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="hero-bg sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">MindSpire Tech</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-700 bg-opacity-90">
+            <a href="#home" class="block py-2 px-4 text-sm text-white hover:bg-emerald-500">Home</a>
+            <a href="#services" class="block py-2 px-4 text-sm text-white hover:bg-emerald-500">Services</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-white hover:bg-emerald-500">About Us</a>
+            <a href="#testimonials" class="block py-2 px-4 text-sm text-white hover:bg-emerald-500">Testimonials</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-white hover:bg-emerald-500">Contact</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg text-white py-20 md:py-32 animated-item">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Empowering Your Mental Wellness Journey</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-slate-200">
+                At MindSpire Tech, we leverage technology to provide accessible and compassionate mental health support. Discover a new path to well-being.
+            </p>
+            <a href="#services" class="cta-button text-lg">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title animated-item">How We Can Help</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card animated-item">
+                    <img src="https://placehold.co/100x100/667EEA/FFFFFF?text=LS" alt="Online Therapy Icon" class="mx-auto mb-4 rounded-full" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Error'">
+                    <h3 class="text-xl font-semibold mb-3 text-center text-slate-700">Online Therapy Sessions</h3>
+                    <p class="text-slate-600 text-center">Connect with licensed therapists from the comfort of your home. Secure, confidential, and personalized.</p>
+                </div>
+                <div class="service-card animated-item" style="transition-delay: 0.1s;">
+                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=MR" alt="Mindfulness Resources Icon" class="mx-auto mb-4 rounded-full" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Error'">
+                    <h3 class="text-xl font-semibold mb-3 text-center text-slate-700">Mindfulness Resources</h3>
+                    <p class="text-slate-600 text-center">Access a library of guided meditations, breathing exercises, and stress-reduction techniques.</p>
+                </div>
+                <div class="service-card animated-item" style="transition-delay: 0.2s;">
+                     <img src="https://placehold.co/100x100/FF9800/FFFFFF?text=SG" alt="Support Groups Icon" class="mx-auto mb-4 rounded-full" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Error'">
+                    <h3 class="text-xl font-semibold mb-3 text-center text-slate-700">Community Support Groups</h3>
+                    <p class="text-slate-600 text-center">Join moderated support groups to share experiences and connect with others on similar journeys.</p>
+                </div>
+                 <div class="service-card animated-item" style="transition-delay: 0.3s;">
+                    <img src="https://placehold.co/100x100/E91E63/FFFFFF?text=WT" alt="Wellness Tracking Icon" class="mx-auto mb-4 rounded-full" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Error'">
+                    <h3 class="text-xl font-semibold mb-3 text-center text-slate-700">Wellness Tracking Tools</h3>
+                    <p class="text-slate-600 text-center">Monitor your mood, habits, and progress with our intuitive digital journaling and tracking features.</p>
+                </div>
+                 <div class="service-card animated-item" style="transition-delay: 0.4s;">
+                    <img src="https://placehold.co/100x100/2196F3/FFFFFF?text=EC" alt="Educational Content Icon" class="mx-auto mb-4 rounded-full" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Error'">
+                    <h3 class="text-xl font-semibold mb-3 text-center text-slate-700">Educational Content</h3>
+                    <p class="text-slate-600 text-center">Explore articles, webinars, and workshops on various mental health topics, curated by experts.</p>
+                </div>
+                 <div class="service-card animated-item" style="transition-delay: 0.5s;">
+                     <img src="https://placehold.co/100x100/795548/FFFFFF?text=CS" alt="Crisis Support Icon" class="mx-auto mb-4 rounded-full" onerror="this.src='https://placehold.co/100x100/CCCCCC/FFFFFF?text=Error'">
+                    <h3 class="text-xl font-semibold mb-3 text-center text-slate-700">24/7 Crisis Support Links</h3>
+                    <p class="text-slate-600 text-center">Quick access to helplines and emergency resources for immediate assistance when you need it most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12 animated-item">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-700 mb-6 text-center md:text-left">About MindSpire Tech</h2>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        MindSpire Tech was founded on the belief that everyone deserves access to quality mental health care. We are a passionate team of technologists, mental health professionals, and advocates dedicated to breaking down barriers and fostering a world where mental wellness is prioritized.
+                    </p>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Our mission is to empower individuals with the tools and support they need to navigate life's challenges, build resilience, and cultivate lasting mental well-being. We are committed to innovation, compassion, and confidentiality in everything we do.
+                    </p>
+                    <a href="#contact" class="cta-button inline-block">Learn More About Our Mission</a>
+                </div>
+                <div class="md:w-1/2 animated-item" style="transition-delay: 0.2s;">
+                    <img src="https://placehold.co/600x400/764BA2/FFFFFF?text=Our+Team+Vibes" alt="Team or abstract representation of MindSpire Tech" class="rounded-xl shadow-xl w-full h-auto" onerror="this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Image+Error'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-16 md:py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title animated-item">Our Impact So Far</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="stat-item animated-item" style="transition-delay: 0.1s;">
+                    <div class="stat-number">10k+</div>
+                    <div class="stat-label">Lives Touched</div>
+                </div>
+                <div class="stat-item animated-item" style="transition-delay: 0.2s;">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Certified Therapists</div>
+                </div>
+                <div class="stat-item animated-item" style="transition-delay: 0.3s;">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Positive Feedback</div>
+                </div>
+                <div class="stat-item animated-item" style="transition-delay: 0.4s;">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title animated-item">Words From Our Community</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card animated-item">
+                    <img src="https://placehold.co/80x80/667EEA/FFFFFF?text=AU" alt="User Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-emerald-300" onerror="this.src='https://placehold.co/80x80/CCCCCC/FFFFFF?text=Error'">
+                    <p class="text-slate-600 italic mb-4 text-center">"MindSpire Tech has been a game-changer for my mental health. The online sessions are so convenient, and my therapist is wonderful."</p>
+                    <p class="font-semibold text-slate-700 text-center">- Alex P.</p>
+                </div>
+                <div class="testimonial-card animated-item" style="transition-delay: 0.1s;">
+                     <img src="https://placehold.co/80x80/4CAF50/FFFFFF?text=SJ" alt="User Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-emerald-300" onerror="this.src='https://placehold.co/80x80/CCCCCC/FFFFFF?text=Error'">
+                    <p class="text-slate-600 italic mb-4 text-center">"The mindfulness resources are fantastic. I use them daily to manage stress. Highly recommend this platform!"</p>
+                    <p class="font-semibold text-slate-700 text-center">- Sarah J.</p>
+                </div>
+                <div class="testimonial-card animated-item" style="transition-delay: 0.2s;">
+                    <img src="https://placehold.co/80x80/FF9800/FFFFFF?text=MK" alt="User Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-emerald-300" onerror="this.src='https://placehold.co/80x80/CCCCCC/FFFFFF?text=Error'">
+                    <p class="text-slate-600 italic mb-4 text-center">"Joining a support group here made me feel less alone. It's a safe and welcoming space to share."</p>
+                    <p class="font-semibold text-slate-700 text-center">- Michael K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 hero-bg text-white">
+        <div class="container mx-auto px-6 text-center animated-item">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Prioritize Your Mental Wellness?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-xl mx-auto text-slate-200">
+                Take the first step towards a healthier, happier you. Our team is here to support you.
+            </p>
+            <a href="mailto:contact@mindspire.tech" class="cta-button bg-white text-emerald-600 hover:bg-slate-100 text-lg">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-800 text-slate-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <a href="#" class="text-xl font-bold text-white">MindSpire Tech</a>
+            </div>
+            <div class="mb-4 space-x-4">
+                <a href="#" class="hover:text-emerald-400">Privacy Policy</a>
+                <a href="#" class="hover:text-emerald-400">Terms of Service</a>
+                <a href="#" class="hover:text-emerald-400">FAQ</a>
+            </div>
+            <div class="mb-4">
+                <p>123 Wellness Avenue, Mindful City, MS 54321</p>
+                <p>Email: <a href="mailto:info@mindspire.tech" class="hover:text-emerald-400">info@mindspire.tech</a> | Phone: (555) 123-4567</p>
+            </div>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="hover:text-emerald-400" aria-label="Facebook">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="hover:text-emerald-400" aria-label="Twitter">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                </a>
+                <a href="#" class="hover:text-emerald-400" aria-label="Instagram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.023.047 1.351.058 3.807.058h.468c2.456 0 2.784-.011 3.807-.058.975-.045 1.504-.207 1.857-.344.467-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.047-1.023.058-1.351.058-3.807v-.468c0-2.456-.011-2.784-.058-3.807-.045-.975-.207-1.504-.344-1.857a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <p class="text-sm">&copy; <span id="currentYear"></span> MindSpire Tech. All rights reserved. Nurturing Minds, Inspiring Futures.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll animations
+        const animatedItems = document.querySelectorAll('.animated-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        animatedItems.forEach(item => {
+            observer.observe(item);
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
